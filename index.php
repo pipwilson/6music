@@ -69,8 +69,7 @@ function plural($num) {
 <body>
   <p id="song"><?php echo $songs[0]->get_title(); ?></p>
   <p>played <?php echo getRelativeTime($songs[0]->get_date('U')); ?> by</p>
-  <p id="show"><?php echo $showtitle; ?></p>
-  <?php echo preg_replace ('/[^a-z0-9 ]/i', '', $showtitle); ?>
+  <p id="show"><a href="http://www.bbc.co.uk/programmes/<?php echo preg_replace ('/[^a-z0-9 ]/i', '', $showtitle); ?>"><?php echo $showtitle; ?></a></p>
   <!-- <p id="listen"><a href="http://www.bbc.co.uk/iplayer/console/bbc_6music">listen live</a></p> -->
   <p id="refresh"><a href="javascript:window.location.reload();"><img src="01-refresh.png" width="24" height="26" border="0" alt="reload this page"></a></p>
   <p id="about"><a href="about.html">about</a></p>
