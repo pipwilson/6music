@@ -1,7 +1,10 @@
 <?php
 
-include __DIR__ . '/config.php';
-require __DIR__ . '/simplepie/simplepie.inc';
+#include __DIR__ . '/config.php';
+#require __DIR__ . '/simplepie/simplepie.inc';
+
+include 'config.php';
+require 'simplepie/simplepie.inc';
 
 $feed = new SimplePie;
 $feed->set_feed_url("http://ws.audioscrobbler.com/1.0/user/bbc6music/recenttracks.rss");
@@ -84,7 +87,7 @@ function plural($num) {
   }
   #amazon {
     font-family: Arial;
-    font-size: 2em;
+    font-size: em;
   }
   a {
     color: #C34402;
