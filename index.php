@@ -88,7 +88,7 @@ function plural($num) {
   }
   #amazon {
     font-family: Arial;
-    font-size: em;
+    font-size: 2em;
   }
   a {
     color: #C34402;
