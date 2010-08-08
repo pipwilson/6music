@@ -19,7 +19,8 @@ $query = preg_replace ('/[^a-z0-9 ]/i', '', $song);
 
 $mp3s = array();
 if ($conf['amazon']['key'] && $conf['amazon']['secret']) {
-  require __DIR__ . '/amazon.php';
+  #require __DIR__ . '/amazon.php';
+  require 'amazon.php';
   $amazon = new Amazon;
   $amazon->key = $conf['amazon']['key'];
   $amazon->secret = $conf['amazon']['secret'];
