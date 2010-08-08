@@ -1,5 +1,7 @@
 <?php
 
+ini_set('arg_separator.output', '&');
+
 class Amazon {
     public $key; // https://aws-portal.amazon.com/gp/aws/developer/account/index.html?action=access-key
     public $secret; // https://aws-portal.amazon.com/gp/aws/developer/account/index.html?action=access-key
@@ -33,7 +35,8 @@ class Amazon {
         );
 
       $params['Signature'] = $this->sign($params);
-      $xml = simplexml_load_file('http://' . $this->host . $this->path . '?' . http_build_query($params));
+      $request = 'http://' . $this->host . $this->path . '?' . http_build_query($params);
+      $xml = simplexml_load_file($request);
 
       if (!is_object($xml) || (string) $xml->Items->Request->IsValid != 'True')
         return array();
