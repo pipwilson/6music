@@ -29,7 +29,7 @@ if ($conf['amazon']['key'] && $conf['amazon']['secret']) {
 }
 
 if (empty($mp3s))
-  $mp3s = array(array('info' => 'http://www.amazon.com/s/?url=search-alias%3Ddigital-music&field-keywords=' . urlencode($query)));
+  $mp3s = array(array('info' => 'http://www.amazon.co.uk/s/?url=search-alias%3Ddigital-music&field-keywords=' . urlencode($query)));
 
 /*
 $feed->set_feed_url("http://twitter.com/statuses/user_timeline/15734589.rss");

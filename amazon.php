@@ -7,7 +7,7 @@ class Amazon {
     public $secret; // https://aws-portal.amazon.com/gp/aws/developer/account/index.html?action=access-key
     public $tag; // https://affiliate-program.amazon.com/
 
-    private $host = 'ecs.amazonaws.com';
+    private $host = 'ecs.amazonaws.co.uk';
     private $path = '/onca/xml';
 
     function sign($params){
